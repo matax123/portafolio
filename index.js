@@ -82,37 +82,11 @@ async function sendEmail(event) {
 document.addEventListener('DOMContentLoaded', function () {
     var navbarCollapse = document.querySelector('.navbar-collapse');
 
-
-    // let button = document.querySelector(".navbar-toggler");
-    // if(button.classList.contains("collapsed")){
-    //     myImage.style.top = "px";
-    // }
-    // console.log('Height changed:', entry.contentRect.height);
-    // requestAnimationFrame(() => {
-    //     myImage.style.top = entry.contentRect.height + "px";
-    // });
-    // console.log("top", myImage.style.top)
-
-
     navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-        console.log('Navbar is collapsed');
-        console.log("height", navbarCollapse.offsetHeight)
-        requestAnimationFrame(() => {
-            
-        });
-        myImage.style.top = navbarCollapse.offsetHeight + "px";
-            console.log("top", myImage.style.top)
-            var _ = myImage.offsetHeight;
+        handleResize();
     });
 
     navbarCollapse.addEventListener('shown.bs.collapse', function () {
-        console.log('Navbar is expanded');
-        console.log("height", navbarCollapse.offsetHeight)
-        requestAnimationFrame(() => {
-            myImage.style.top = "1000px";
-        });
-        myImage.style.top = navbarCollapse.offsetHeight + "px";
-            console.log("top", myImage.style.top)
-            var _ = myImage.offsetHeight;
+        handleResize();
     });
 });
