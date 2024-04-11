@@ -62,8 +62,6 @@ async function sendEmail(event) {
         if (name == "" || email == "" || message == "") return alert("Por favor, complete todos los campos");
     
         let url = `https://email-sender-9qlw.onrender.com/contact?name=${name}&from=${email}&to=${to}&subject=Nuevo mensaje de contacto&message=${message}`;
-        url = `http://localhost:8080/contact?name=${name}&from=${email}&to=${to}&subject=Nuevo mensaje de contacto&message=${message}`
-        // url = "https://email-sender-9qlw.onrender.com/contact?name=Nombre&from=Contacto&to=elshadowmatax@gmail.com&subject=asunto&message=mensaje";
         let response = await fetch(url);
     
         if (response.ok) {
