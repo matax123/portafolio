@@ -62,13 +62,13 @@
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item ms-auto me-1">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#About">About</a>
                 </li>
                 <li class="nav-item ms-auto me-1">
-                  <a class="nav-link" href="#">Skills</a>
+                  <a class="nav-link" href="#Skills">Skills</a>
                 </li>
                 <li class="nav-item ms-auto me-1">
-                  <a class="nav-link" href="#">Projects</a>
+                  <a class="nav-link" href="#Projects">Projects</a>
                 </li>
                 <li class="nav-item ms-auto ps-3">
                   <a class="nav-link d-flex flex-row align-items-center justify-content-center bg-color6 m-1 rounded p-2" href="#">
@@ -111,12 +111,12 @@
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
 
           <div class="d-flex flex-row justify-content-center align-items-center gap-3">
-            <span style="font-size: 66px;">2</span>
+            <span style="font-size: 66px;">3</span>
             <span class="text-uppercase color7" style="font-size: 20px;">Years of<br>experience</span>
           </div>
           <div class="d-flex flex-row justify-content-center align-items-center gap-2">
-            <span style="font-size: 66px;">10</span>
-            <span class="text-uppercase color7" style="font-size: 20px;">Projects<br>done</span>
+            <span style="font-size: 66px;">10+</span>
+            <span class="text-uppercase color7" style="font-size: 20px;">Projects<br>finished</span>
           </div>
           <div class="d-flex flex-row justify-content-center align-items-center gap-3">
             <span class="text-uppercase color7" style="font-size: 20px;">Bachelor's Degree <br> in Computer Science</span>
@@ -137,7 +137,7 @@
 
     <section class="py-5 bg-color4 color2">
       <div class="container">
-        <h2 class="fs-2 fw-bold mb-3">About</h2>
+        <h2 class="fs-2 fw-bold mb-3" id="About">About</h2>
         <p class="fs-5 line-height-2 w-100 text-justify" style="max-width: 600px;">I am passionate for my job.<br>
         My primary focus is creating scalable, maintainable and efficient code.
         I am a team player and I am always willing to help others.
@@ -146,7 +146,7 @@
         Programming best practices are my priority.</p>
       </div>
       <div class="container d-flex flex-column align-items-end gap-3">
-        <h2 class="fs-2 fw-bold">Skills</h2>
+        <h2 class="fs-2 fw-bold" id="Skills">Skills</h2>
         <div class="d-flex flex-column gap-2" style="max-width: 600px;">
           <p class="fs-5 line-height-2 w-100 text-justify text-end">
             I have experience in the following technologies:
@@ -167,31 +167,79 @@
         </div>
       </div>
       <div class="container">
-        <h2 class="fs-2 fw-bold mb-3">Projects</h2>
-        <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./img/proyectos/activaEmpresarias.webp" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/proyectos/antsWorld.webp" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <a>See more...</a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/proyectos/inertia.webp" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/proyectos/newProcess.webp" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
+        <h2 class="fs-2 fw-bold mb-3" id="Projects">Projects</h2>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <div class="project-card">
+            <video class="project-video" autoplay loop muted>
+              <source src="./img/proyectos/xd.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="project-info">
+              <h3 class="project-title">Ants world</h3>
+              <p class="project-description">A relaxed real time strategy game</p>
+              <div class="project-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Visual Studio</span>
+                <span class="tag">Git</span>
               </div>
             </div>
           </div>
+          <div class="project-card">
+            <img class="project-image" src="./img/proyectos/activaEmpresarias.webp" alt="">
+            <div class="project-info">
+              <h3 class="project-title">ActivaEmpresarias</h3>
+              <p class="project-description">ActivaEmpresarias is a platform that connects women-owned businesses with companies seeking their products or services.</p>
+              <div class="project-tags">
+                <span class="tag">Wordpress</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img class="project-image" src="./img/proyectos/newProcess.webp" alt="">
+            <div class="project-info">
+              <h3 class="project-title">New Process</h3>
+              <p class="project-description">New Process is a platform that speeds up the process of developing common software solutions.</p>
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img class="project-image" src="./img/proyectos/inertia.webp" alt="">
+            <div class="project-info">
+              <h3 class="project-title">Inertia</h3>
+              <p class="project-description">New Process is a platform that speeds up the process of developing common software solutions.</p>
+              <div class="project-tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="project-card">
+            <img class="project-image" src="./img/proyectos/apigestionusuarios.bmp" alt="">
+            <div class="project-info">
+              <h3 class="project-title">Gestion Usuarios</h3>
+              <p class="project-description">New Process is a platform that speeds up the process of developing common software solutions.</p>
+              <div class="project-tags">
+                <span class="tag">.NET CORE 8.0</span>
+                <span class="tag">C#</span>
+                <span class="tag">Swagger</span>
+                <span class="tag">Postman</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
