@@ -52,6 +52,8 @@ function handleResize() {
 }
 
 async function sendEmail(event) {
+    let send = event.target.children[0];
+    let loading = event.target.children[1];
     try{
         event.preventDefault();
         var name = document.getElementById("name").value;
@@ -64,18 +66,26 @@ async function sendEmail(event) {
         let url = `https://email-sender-9qlw.onrender.com/contact?name=${name}&from=${email}&to=${to}&subject=Nuevo mensaje de contacto&message=${message}`;
         url = `http://localhost:8080/contact?name=${name}&from=${email}&to=${to}&subject=Nuevo mensaje de contacto&message=${message}`
         // url = "https://email-sender-9qlw.onrender.com/contact?name=Nombre&from=Contacto&to=elshadowmatax@gmail.com&subject=asunto&message=mensaje";
+
+        send.classList.add("d-none");
+        loading.classList.remove("d-none");
+
         let response = await fetch(url);
     
         if (response.ok) {
-            alert("Mensaje enviado correctamente");
+            alert("Message sent successfully");
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
         }
-        else throw new Error("Error al enviar el mensaje");
+        else throw new Error("Message could not be sent");
     }
     catch(e){
-        alert("Error al enviar el mensaje");
+        alert("Message could not be sent");
+    }
+    finally{
+        send.classList.remove("d-none");
+        loading.classList.add("d-none");
     }
 }
 
