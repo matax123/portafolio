@@ -1,12 +1,7 @@
 new WOW().init()
 
-window.onload = function () {
-    $("#loading").fadeOut(1000);
-    $("body").removeClass("preload");
+window.onload = async function () {
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    var mobileURL = "https://api.whatsapp.com/send/?phone=56991353540&text=";
-    var pcURL = "https://web.whatsapp.com/send?phone=56991353540&text=";
 
     let myImage = document.getElementById("myImage");
     myImage.style.height = "0px";
@@ -15,6 +10,9 @@ window.onload = function () {
         handleResize();
     });
     myImage.classList.remove("d-none");
+
+    document.getElementById("loading").close();
+    document.querySelector('.preload').classList.remove('preload');
 }
 
 
