@@ -278,6 +278,9 @@ color: #666;
 
 .project-tags {
 margin-bottom: 16px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
 }
 
 .tag {
@@ -320,3 +323,138 @@ to {
 transform: rotate(-360deg);
 }
 }
+
+
+/* LOADER */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--color3);
+  border-color: var(--color3) transparent var(--color3) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+#loading[open] {
+  opacity: 1;
+  visibility: visible;
+}
+
+#loading {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.25s, visibility 0.25s, display 0.25s ease allow-discrete;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  background-color: rgba(255,255,255, 0.5);
+  backdrop-filter: blur(5px);
+  color: var(--color3);
+}
+
+:root[theme="dark"] #loading {
+  background-color: rgba(0,0,0, 0.33);
+}
+
+.preload {
+  overflow: hidden;
+}
+/* FINISH LOADER */
+
+/* TABLE */
+table {
+  width: 100%;
+}
+
+table thead{
+  white-space: nowrap;  /* Prevent wrapping inside the container */
+  height: 60px;
+}
+
+table * {
+  border: none !important;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--colorBG1);
+}
+
+.tableContainer{
+  min-width: 100%;
+  overflow-x: auto;
+  box-shadow: var(--boxShadow1);
+  border-radius: 10px;
+}
+
+:root {
+  .tableContainer::-webkit-scrollbar {
+      width: 12px;
+  }
+  
+  .tableContainer::-webkit-scrollbar-track {
+      background: rgb(255,255,255);
+      border-radius: 0px 0px 10px 10px;
+  }
+  
+  .tableContainer::-webkit-scrollbar-thumb {
+      background-color: rgb(220, 220, 220);
+      border-radius: 0px 0px 10px 10px;
+  }
+}
+
+:root[theme="dark"] {
+  .tableContainer::-webkit-scrollbar {
+      width: 12px;
+  }
+  
+  .tableContainer::-webkit-scrollbar-track {
+      background: rgb(70,70,70);
+      border-radius: 0px 0px 10px 10px;
+  }
+  
+  .tableContainer::-webkit-scrollbar-thumb {
+      background-color: rgb(89, 89, 89);
+      border-radius: 0px 0px 10px 10px;
+  }
+}
+
+/* OTHERS */
+.dialog[open] {
+  width: 400px;
+  background-color: var(--colorBG1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: var(--boxShadow1);
+  color: var(--color3);
+}
+
+/* Remove border when an element is focused */
+* {
+  border: none;
+  outline: none;
+}
+
